@@ -1,0 +1,7 @@
+const shirts=["https://ibb.co/qx9qLZc", "https://ibb.co/JvCVN2D", "https://ibb.co/7gbw2cJ", "https://ibb.co/qNZyCWr", "https://ibb.co/cJ7xmnR", "https://ibb.co/D4yBmjX", "https://ibb.co/kJc787m", "https://ibb.co/phvZrTy", "https://ibb.co/sPfjbFJ", "https://ibb.co/4KY2ysP", "https://ibb.co/1rF1hGx", "https://ibb.co/K06XXCj"]
+const shoes=["https://ibb.co/4Y4Sz4Q", "https://ibb.co/8zS78Gy", "https://ibb.co/0XtbTCW", "https://ibb.co/qnth96S", "https://ibb.co/Z8phYnL", "https://ibb.co/gJV8Zcs", "https://ibb.co/gJ5Q0T6", "https://ibb.co/LkRq8WR", "https://ibb.co/B6753dK", "https://ibb.co/xqjpzxp", "https://ibb.co/vBsKwZ7", "https://ibb.co/Sf2jmmZ"]
+const watches=["https://ibb.co/k5S0xkL", "https://ibb.co/4Knc0L0", "https://ibb.co/mbjMMQ2", "https://ibb.co/LgSNDhC", "https://ibb.co/HFMqW5V", "https://ibb.co/1Rkb3nB", "https://ibb.co/nzdsRsR", "https://ibb.co/sQCQvwH", "https://ibb.co/52kzyvP", "https://ibb.co/Jtq2Qh8", "https://ibb.co/zRwpGfp", "https://ibb.co/dWpsty3"]
+const pants=["https://ibb.co/SBbzb97", "https://ibb.co/p3mhtKV", "https://ibb.co/XWBkMx7", "https://ibb.co/5vB0fJ8", "https://ibb.co/HNL5PW7"]
+
+
+//https://ibb.co/SBbzb97/1.jpg

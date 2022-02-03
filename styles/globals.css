@@ -1,0 +1,138 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* @layer utilities {
+  h1 {
+    @apply text-4xl;
+  }
+  h2{
+    @apply text-
+  }
+} */
+
+@layer base {
+  * {
+    font-family: "Inter", sans-serif;
+  }
+  p,
+  h1,
+  h2,
+  h3,
+  h5,
+  h4,
+  h6 {
+    @apply text-[#252C32];
+  }
+  h3 {
+    @apply text-xl font-bold;
+  }
+  h2 {
+    @apply text-3xl font-semibold;
+  }
+}
+
+@layer utilities {
+  .features-title {
+    display: inline-block;
+    position: relative;
+  }
+  .features-title::after {
+    content: "";
+    height: 2px;
+    width: 40%;
+    background: #f24432;
+    position: absolute;
+    left: calc(50% - 20%);
+    bottom: 0;
+  }
+  .shop-title {
+    display: inline-block;
+    position: relative;
+  }
+  .shop-title::after {
+    content: "";
+    height: 2px;
+    width: 20%;
+    background: #f24432;
+    position: absolute;
+    left: calc(50% - 50%);
+    bottom: 0;
+  }
+  .black-button {
+    @apply text-[#FFFFFF] bg-secondaryColor py-3 px-8 outline-none;
+  }
+  .table-header {
+    @apply py-2 font-semibold;
+  }
+  .table-content {
+  }
+
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    min-width: 158px;
+    z-index: 1;
+  }
+  .shop:hover .dropdown-menu {
+    display: block;
+  }
+  .shop:hover a {
+    display: block;
+  }
+  .dropdown-menu a:hover {
+    @apply bg-main;
+    color: #fff;
+  }
+  .shop {
+    display: inline-block;
+    position: relative;
+  }
+  .dropdown-menu a {
+    @apply p-4 text-[#000000];
+  }
+
+  /* Checkout Page */
+  .checkout-elements-width {
+    @apply w-1/2;
+  }
+  .main-button {
+    @apply py-3 px-8 outline-none bg-main text-[#FFFFFF] font-semibold;
+  }
+  /* .product:hover .product-buttons {
+    min-height: 0;
+  }
+
+  .product-buttons {
+    min-height: 10vh;
+  }
+  .product-buttons-each {
+    display: none;
+    transition: display 2s;
+  }
+  .product:hover .product-buttons-each {
+    display: block;
+  } */
+  .testing {
+    transition: visibility 3s cubic-bezier(0.37, 0, 0.63, 1);
+  }
+  .quantity-button {
+    @apply bg-[#e5e5e5] px-2  sm:px-4 sm:py-2 rounded-full hover:bg-main hover:text-[#FFFFFF] active:bg-[#FFFFFF] active:text-textColor;
+  }
+}

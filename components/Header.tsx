@@ -156,16 +156,14 @@ export default function Header(props: any) {
           <ul className="flex justify-between items-center">
             {navigation.map((each) => {
               if (each.name === "Shop") {
+                const number = Math.floor(
+                  Math.random() * (categories.length - 1)
+                );
+                const chosenNumber = number >= 4 ? 3 : number;
                 return (
                   <section key={each.name} className="shop  ">
                     <Link
-                      href={`/shop/${
-                        categories[
-                          Math.floor(Math.random() * categories.length) - 1 >= 4
-                            ? 3
-                            : Math.floor(Math.random() * categories.length) - 1
-                        ].name
-                      }`}
+                      href={`/shop/${categories[chosenNumber].name}`}
                       passHref
                     >
                       <a className="hover:text-main cursor-pointer">
@@ -223,7 +221,7 @@ export default function Header(props: any) {
           style={{ display: openMenu ? "block" : "none" }}
           className=" md:hidden  "
         >
-          <DropDownMenu menu={navigation} />
+          <DropDownMenu menu={navigation} categories={categories} />
         </nav>
         <ProductDrawer toggle={showCartDrawer} setToggle={setShowCartDrawer} />
       </header>

@@ -15,6 +15,6 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "Contexts/CreateContext.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "Contexts/CreateContext.js", "pages/cart.js", "pages/api/payment_intent.js"],
   "exclude": ["node_modules"]
 }

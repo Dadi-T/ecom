@@ -25,20 +25,13 @@ export default function CardDetails({
     },
     hidePostalCode: true,
   };
-  useEffect(() => {
-    if (cardLoading) {
-      card_payment();
-    }
-  }, [cardLoading]);
-  const elements = useElements();
-  const stripe = useStripe();
   async function card_payment() {
     //create a payment intent on the server
     try {
       const { data: clientSecret } = await axios.post("/api/payment_intent", {
         amount: price * 100,
       });
-      const cardElement = elements?.getElement(CardElement);
+      const cardElement: any = elements?.getElement(CardElement);
       const paymentMethodReq = await stripe?.createPaymentMethod({
         type: "card",
         card: cardElement,
@@ -75,6 +68,14 @@ export default function CardDetails({
     }
     setCardLoading(false);
   }
+  useEffect(() => {
+    if (cardLoading) {
+      card_payment();
+    }
+  }, [cardLoading]);
+  const elements = useElements();
+  const stripe = useStripe();
+
   return (
     <>
       <FeedBack

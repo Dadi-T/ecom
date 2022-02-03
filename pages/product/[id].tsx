@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Select from "@mui/material/Select";
 import MenuItem from "@mui/material/MenuItem";
-import { useState, useEffect, useContext } from "react";
+import { useState, useContext } from "react";
 import InputLabel from "@mui/material/InputLabel";
 import FormControl from "@mui/material/FormControl";
 import Breadcrumbs from "@mui/material/Breadcrumbs";
@@ -14,30 +14,13 @@ import Button from "@mui/material/Button";
 //interface
 import { product } from "../../interfaces/interfaces";
 
-//mui
-import { makeStyles } from "@mui/styles";
-
-const useStyles = makeStyles({
-  select: {
-    "&:before": {
-      borderColor: "red",
-    },
-    "&:after": {
-      borderColor: "red",
-    },
-  },
-  icon: {
-    fill: "red",
-  },
-});
-export default function id({
+export default function Id({
   product,
   related,
 }: {
   product: product;
   related: product[];
 }) {
-  const classes = useStyles();
   const [size, setSize] = useState(product.sizes[0]);
   const [quantity, setQuantity] = useState(1);
   const router = useRouter();
@@ -58,6 +41,7 @@ export default function id({
                 </Breadcrumbs>
                 <div className="relative md:h-full h-[30vh]">
                   <Image
+                    alt="product"
                     className="rounded-sm"
                     src={product.picture}
                     objectFit="contain"

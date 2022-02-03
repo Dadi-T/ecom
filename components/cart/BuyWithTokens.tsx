@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+declare var window: any;
 
 //web3
 import web3 from "../../ethereum/web3";
@@ -17,10 +18,6 @@ import LoadingButton from "@mui/lab/LoadingButton";
 export default function BuyWithTokens({ tokenAmount }: any) {
   const { state, resetCart } = useContext(Context);
   const [totalTokens, setTotalTokens] = useState(getTotalCart() / 1000);
-  useEffect(() => {
-    //change the total when quantity of a product changes
-    setTotalTokens(getTotalCart() / 1000);
-  }, [state]);
   function getTotalCart() {
     let total = 0;
     let shipping = state.cartProducts?.length ? 10 : 0;
@@ -30,6 +27,11 @@ export default function BuyWithTokens({ tokenAmount }: any) {
 
     return total + shipping;
   }
+  useEffect(() => {
+    //change the total when quantity of a product changes
+    setTotalTokens(getTotalCart() / 1000);
+  }, [state]);
+
   const [openUse, setOpenUse] = useState(false);
   const [using, setUsing] = useState(false);
   const [errors, setErrors] = useState({ buyError: "", useError: "" });

@@ -12,6 +12,7 @@ export default function CartComponent({ product }: { product: cartProduct }) {
     <div className=" grid grid-cols-3  lg:grid-cols-5  md:h-[15vh] gap-x-4  lg:h-[20vh] my-2 ">
       <div className="relative h-full">
         <Image
+          alt="product"
           className="rounded-md"
           src={product.picture}
           layout="fill"

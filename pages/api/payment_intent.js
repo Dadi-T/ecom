@@ -2,7 +2,7 @@ import Stripe from "stripe";
 
 const stripe = new Stripe(process.env.STRIPE_PRV_KEY);
 
-export default async (req: any, res: any) => {
+const call = async (req, res) => {
   if (req.method === "POST") {
     try {
       //For production-ready applications we recommend not using the
@@ -17,7 +17,7 @@ export default async (req: any, res: any) => {
         currency: "usd",
       });
       res.status(200).send(paymentIntent.client_secret);
-    } catch (err: any) {
+    } catch (err) {
       res.status(500).json({ statusCode: 500, message: err.message });
     }
   } else {
@@ -25,3 +25,5 @@ export default async (req: any, res: any) => {
     res.status(405).end("Method not allowed");
   }
 };
+
+export default call;

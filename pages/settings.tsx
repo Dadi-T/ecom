@@ -17,13 +17,12 @@ export default function Settings(props: any) {
 
   const [user, loading] = useAuthState(auth);
   useEffect(() => {
-    console.log("The user :", user);
     if (!loading) {
       if (!user) {
         router.push("/login");
       }
     }
-  }, [loading]);
+  }, [loading, user]);
   function renderEdit() {
     switch (currentEdit) {
       case "Main": {
@@ -119,7 +118,10 @@ export default function Settings(props: any) {
             {menu.map((item) => {
               if (item === "Sign Out") {
                 return (
-                  <li className=" border-b-[1px] border-x-[1px] border-[#e5e5e5]">
+                  <li
+                    key={item}
+                    className=" border-b-[1px] border-x-[1px] border-[#e5e5e5]"
+                  >
                     <button
                       onClick={() => {
                         signOutFunc();
@@ -138,7 +140,10 @@ export default function Settings(props: any) {
                 );
               }
               return (
-                <li className=" border-b-[1px] border-x-[1px] border-[#e5e5e5]">
+                <li
+                  key={item}
+                  className=" border-b-[1px] border-x-[1px] border-[#e5e5e5]"
+                >
                   <button
                     onClick={() => setCurrentEdit(item)}
                     style={{

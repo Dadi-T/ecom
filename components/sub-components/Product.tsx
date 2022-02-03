@@ -27,6 +27,7 @@ export default function Product({ product }: { product: product }) {
         className="relative cursor-pointer h-[30vh] "
       >
         <Image
+          alt="product"
           className="lg:rounded-lg"
           src={product.picture}
           layout="fill"

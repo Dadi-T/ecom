@@ -5,13 +5,12 @@ import FormControlLabel from "@mui/material/FormControlLabel";
 import FormControl from "@mui/material/FormControl";
 import FormLabel from "@mui/material/FormLabel";
 import { useState, useContext, useEffect } from "react";
-import Header from "../components/Header";
-import { register, signOutFunc, login } from "../firebase/users";
+import { register, login } from "../firebase/users";
 import { Context } from "../Contexts/cartContext";
 import { useRouter } from "next/router";
 import { addAddress } from "../firebase/users";
 import Button from "@mui/material/Button";
-
+declare var window: any;
 //form validation
 import FeedBack from "../components/sub-components/FeedBack";
 import { useForm } from "react-hook-form";

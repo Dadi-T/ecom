@@ -54,7 +54,7 @@ export default function Header(props: any) {
       }
     }
     asyncLogic();
-  }, [loading]);
+  }, [loading, user]);
 
   const navigation: { name: string; url: string }[] = [
     {
@@ -91,7 +91,7 @@ export default function Header(props: any) {
         return (
           <>
             <p className="mx-2">{tokenAmount ? tokenAmount : "00.00"}T</p>
-            <Link href="/settings">
+            <Link href="/settings" passHref>
               <a className="">
                 <Avatar alt="avatar" />
               </a>
@@ -121,9 +121,14 @@ export default function Header(props: any) {
     <div>
       <header className=" z-50 h-1/4 bg-[#FFFFFF] md:flex md:items-center md:justify-between border-b-[2px] border-[#e5e5e5] sticky top-[0px]  px-4 sm:px-16 ">
         <div className="flex justify-between items-center">
-          <Image src="/logos/logo.png" width={169 / 2} height={110 / 2} />
+          <Image
+            alt="logo"
+            src="/logos/logo.png"
+            width={169 / 2}
+            height={110 / 2}
+          />
           <div className="basis-1/4 flex justify-between items-center sm:hidden">
-            <Link href="/cart">
+            <Link href="/cart" passHref>
               <button className="">
                 <Badge
                   badgeContent={state.cartProducts?.length}
@@ -150,7 +155,7 @@ export default function Header(props: any) {
               if (each.name === "Shop") {
                 return (
                   <section key={each.name} className="shop  ">
-                    <Link href={`/shop/shirts`}>
+                    <Link href={`/shop/shirts`} passHref>
                       <a className="hover:text-main cursor-pointer">
                         {each.name}
                       </a>
@@ -159,6 +164,7 @@ export default function Header(props: any) {
                       {categories.map((category) => {
                         return (
                           <Link
+                            passHref
                             key={category.name}
                             href={`/shop/${category.name}`}
                           >
@@ -174,7 +180,7 @@ export default function Header(props: any) {
                 );
               } else {
                 return (
-                  <Link key={each.name} href={"/"}>
+                  <Link key={each.name} href={"/"} passHref>
                     <a className="hover:text-main cursor-pointer">
                       {each.name}
                     </a>

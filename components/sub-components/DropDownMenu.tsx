@@ -9,12 +9,16 @@ export default function DropDownMenu({
     <div className="flex flex-col items-end">
       {menu.map((item) => {
         return (
-          <Link href={item.url === "/shop" ? "/shop/shirts" : item.url}>
+          <Link
+            key={item.name}
+            passHref
+            href={item.url === "/shop" ? "/shop/shirts" : item.url}
+          >
             <button className="focus:text-main  py-2">{item.name}</button>
           </Link>
         );
       })}
-      <Link href={"/settings"}>
+      <Link passHref href={"/settings"}>
         <button className="focus:text-main  py-2">Profile Settings</button>
       </Link>
     </div>

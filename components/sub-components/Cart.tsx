@@ -29,9 +29,10 @@ export default function Cart() {
             key={`${Math.floor(Math.random() * 99999999)}`}
             className="grid grid-cols-2 gap-4 px-4 my-2"
           >
-            <Link href={`/product/${item.id}`}>
+            <Link href={`/product/${item.id}`} passHref>
               <div className="relative h-full">
                 <Image
+                  alt="product"
                   className="rounded-md hover:cursor-pointer "
                   src={item.picture}
                   objectFit="contain"

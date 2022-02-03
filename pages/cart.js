@@ -21,7 +21,6 @@ import LoadingButton from "@mui/lab/LoadingButton";
 
 //Context
 import { Context } from "../Contexts/cartContext";
-import { cartProduct } from "../interfaces/interfaces";
 
 //stripe
 import { Elements } from "@stripe/react-stripe-js";
@@ -36,7 +35,7 @@ export default function CartPage() {
   function getTotalCart() {
     let total = 0;
     let shipping = state.cartProducts?.length ? 10 : 0;
-    state.cartProducts?.forEach((item: cartProduct) => {
+    state.cartProducts?.forEach((item) => {
       total += item.price * item.quantity;
     });
 
@@ -52,21 +51,21 @@ export default function CartPage() {
     async function asyncLogic() {
       if (!loading) {
         if (user) {
-          const userData: any = await getDocumentByID(user.uid);
+          const userData = await getDocumentByID(user.uid);
 
           try {
             const tokenResult = await ecommerce.methods
               .tokens(userData.address)
               .call();
             setTokenAmount(web3.utils.fromWei(tokenResult) * 10000);
-          } catch (error: any) {
+          } catch (error) {
             console.log(error.message);
           }
         }
       }
     }
     asyncLogic();
-  }, [loading]);
+  }, [loading, user]);
   const [cardLoading, setCardLoading] = useState(false);
   async function payWithCard() {
     setCardLoading(true);

@@ -29,7 +29,7 @@ export default function Home({ snapshot }: any) {
         <span className="text-main">{router.query.category}</span> with fair
         prices{" "}
       </p>
-      <div className="grid lg:grid-cols-4 mt-12">
+      <div className="grid lg:grid-cols-4 mt-12 md:grid-cols-2 sm:gap-4 gap-2">
         {snapshot.map((product: product) => {
           return <Product key={product.id} product={product} />;
         })}

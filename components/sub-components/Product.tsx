@@ -19,7 +19,7 @@ export default function Product({ product }: { product: product }) {
     setLoading(false);
   }, [state]);
   return (
-    <div className="group product hover:animate-opacity ">
+    <div className="group product hover:animate-opacity  ">
       <div
         onClick={() => {
           router.push(`/product/${product.id}`);

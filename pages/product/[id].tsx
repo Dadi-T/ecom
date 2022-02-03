@@ -35,7 +35,7 @@ export default function Id({
               <div>
                 <Breadcrumbs className="sm:hidden ">
                   <p>Categories</p>
-                  <Link href="/shop/shirts">
+                  <Link href={`/shop/${product.category}`}>
                     <a className="text-main underline">{product.category}</a>
                   </Link>
                 </Breadcrumbs>

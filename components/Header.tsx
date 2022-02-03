@@ -122,12 +122,14 @@ export default function Header(props: any) {
     <div>
       <header className=" z-50 h-1/4 bg-[#FFFFFF] md:flex md:items-center md:justify-between border-b-[2px] border-[#e5e5e5] sticky top-[0px]  px-4 sm:px-16 ">
         <div className="flex justify-between items-center">
-          <Image
-            alt="logo"
-            src="/logos/logo.png"
-            width={169 / 2}
-            height={110 / 2}
-          />
+          <Link href="/" passHref>
+            <Image
+              alt="logo"
+              src="/logos/logo.png"
+              width={169 / 2}
+              height={110 / 2}
+            />
+          </Link>
           <div className="basis-1/4 flex justify-between items-center sm:hidden">
             <Link href="/cart" passHref>
               <button className="">
@@ -156,11 +158,10 @@ export default function Header(props: any) {
               if (each.name === "Shop") {
                 return (
                   <section key={each.name} className="shop  ">
-                    <Link href={`/shop/shirts`} passHref>
-                      <a className="hover:text-main cursor-pointer">
-                        {each.name}
-                      </a>
-                    </Link>
+                    <a className="hover:text-main cursor-pointer">
+                      {each.name}
+                    </a>
+
                     <div className="dropdown-menu border-[1px] border-[#E5E5E5] bg-[#FFFFFF]">
                       {categories.map((category) => {
                         return (

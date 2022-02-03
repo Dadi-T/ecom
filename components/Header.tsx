@@ -158,10 +158,20 @@ export default function Header(props: any) {
               if (each.name === "Shop") {
                 return (
                   <section key={each.name} className="shop  ">
-                    <a className="hover:text-main cursor-pointer">
-                      {each.name}
-                    </a>
-
+                    <Link
+                      href={`/shop/${
+                        categories[
+                          Math.floor(Math.random() * categories.length) - 1 <= 4
+                            ? 4
+                            : Math.floor(Math.random() * categories.length) - 1
+                        ]
+                      }`}
+                      passHref
+                    >
+                      <a className="hover:text-main cursor-pointer">
+                        {each.name}
+                      </a>
+                    </Link>
                     <div className="dropdown-menu border-[1px] border-[#E5E5E5] bg-[#FFFFFF]">
                       {categories.map((category) => {
                         return (

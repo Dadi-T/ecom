@@ -19,22 +19,23 @@ export default function Home({ snapshot }: any) {
   const router = useRouter();
 
   return (
-    <div>
-      <Header />
-      <h2 className="shop-title my-4 py-2 h2">
-        Category <span className="text-main">{router.query.category}</span>
-      </h2>
-      <p>
-        Here you can check out our new{" "}
-        <span className="text-main">{router.query.category}</span> with fair
-        prices{" "}
-      </p>
-      <div className="grid lg:grid-cols-4 mt-12 md:grid-cols-2 sm:gap-4 gap-2">
-        {snapshot.map((product: product) => {
-          return <Product key={product.id} product={product} />;
-        })}
+    <Header>
+      <div className="sm:px-16 px-4">
+        <h2 className="shop-title my-4 py-2 h2">
+          Category <span className="text-main">{router.query.category}</span>
+        </h2>
+        <p>
+          Here you can check out our new{" "}
+          <span className="text-main">{router.query.category}</span> with fair
+          prices{" "}
+        </p>
+        <div className="grid lg:grid-cols-4 mt-12 md:grid-cols-2 sm:gap-4 gap-2">
+          {snapshot.map((product: product) => {
+            return <Product key={product.id} product={product} />;
+          })}
+        </div>
       </div>
-    </div>
+    </Header>
   );
 }
 

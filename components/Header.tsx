@@ -107,6 +107,7 @@ export default function Header(props: any) {
                 color: "white",
                 backgroundColor: "#FB784C",
                 fontWeight: "bold",
+                ":hover": { color: "white", backgroundColor: "#FB784C" },
               }}
               className=" font-semibold  py-2 px-6 outline-none "
             >

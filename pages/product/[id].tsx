@@ -98,7 +98,8 @@ export default function Id({
                       backgroundColor: "#FB784C",
                       paddingY: "0.5rem",
                       paddingX: "1.75rem",
-                      fontWeight: "semibold",
+                      fontWeight: "bold",
+                      ":hover": { color: "white", backgroundColor: "#FB784C" },
                     }}
                     onClick={() => {
                       addProductToCart({

@@ -73,6 +73,7 @@ export default function Product({ product }: { product: product }) {
               color: "white",
               backgroundColor: "#FB784C",
               fontWeight: "bold",
+              ":hover": { color: "white", backgroundColor: "#FB784C" },
             }}
             type="submit"
             variant="contained"
@@ -88,6 +89,7 @@ export default function Product({ product }: { product: product }) {
               color: "white",
               backgroundColor: "#FB784C",
               fontWeight: "bold",
+              ":hover": { color: "white", backgroundColor: "#FB784C" },
             }}
             onClick={() => {
               addProductToCart({

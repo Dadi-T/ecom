@@ -70,10 +70,8 @@ export default function Product({ product }: { product: product }) {
               router.push("/cart");
             }}
             sx={{
-              color: "#FFFFFF",
-              backgroundColor: "white",
-              marginLeft: "1rem",
-              ":hover": { color: "white", backgroundColor: "#FB784C" },
+              color: "white",
+              backgroundColor: "#FB784C",
               fontWeight: "bold",
             }}
             type="submit"
@@ -86,10 +84,9 @@ export default function Product({ product }: { product: product }) {
           <Button
             disabled={loading}
             sx={{
-              color: "#FFFFFF",
-              backgroundColor: "white",
               marginLeft: "1rem",
-              ":hover": { color: "white", backgroundColor: "#FB784C" },
+              color: "white",
+              backgroundColor: "#FB784C",
               fontWeight: "bold",
             }}
             onClick={() => {

@@ -104,11 +104,11 @@ export default function Header(props: any) {
             <Button
               variant="contained"
               sx={{
-                color: "#FB784C",
-                ":hover": { color: "white", backgroundColor: "#FB784C" },
+                color: "white",
+                backgroundColor: "#FB784C",
                 fontWeight: "bold",
               }}
-              className=" font-semibold ml-4 py-2 px-6 outline-none text-[#FFFFFF] bg-main"
+              className=" font-semibold  py-2 px-6 outline-none "
             >
               Join us
             </Button>

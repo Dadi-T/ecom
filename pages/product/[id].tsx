@@ -94,12 +94,11 @@ export default function Id({
                     variant="contained"
                     sx={{
                       alignSelf: "center",
-                      color: "#FB784C",
-                      ":hover": {
-                        color: "white",
-                        backgroundColor: "#FB784C",
-                      },
-                      fontWeight: "bold",
+                      color: "white",
+                      backgroundColor: "#FB784C",
+                      paddingY: "0.5rem",
+                      paddingX: "1.75rem",
+                      fontWeight: "semibold",
                     }}
                     onClick={() => {
                       addProductToCart({
@@ -111,7 +110,7 @@ export default function Id({
                         },
                       });
                     }}
-                    className=" font-semibold ml-4 py-2 px-7 outline-none text-[#FFFFFF] bg-main"
+                    className="  outline-none "
                   >
                     Add to Cart
                   </Button>

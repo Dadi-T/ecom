@@ -164,7 +164,7 @@ export default function Header(props: any) {
                           Math.floor(Math.random() * categories.length) - 1 <= 4
                             ? 4
                             : Math.floor(Math.random() * categories.length) - 1
-                        ]
+                        ].name
                       }`}
                       passHref
                     >

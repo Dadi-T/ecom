@@ -70,13 +70,15 @@ export default function Product({ product }: { product: product }) {
               router.push("/cart");
             }}
             sx={{
-              color: "#FB784C",
+              color: "#FFFFFF",
+              backgroundColor: "white",
+              marginLeft: "1rem",
               ":hover": { color: "white", backgroundColor: "#FB784C" },
               fontWeight: "bold",
             }}
             type="submit"
             variant="contained"
-            className="font-semibold bg-main  text-[#FFFFFF] lg:invisible group-hover:visible  hover:animate-bouncing"
+            className="font-semibold  lg:invisible group-hover:visible  hover:animate-bouncing"
           >
             Buy now
           </Button>
@@ -84,7 +86,9 @@ export default function Product({ product }: { product: product }) {
           <Button
             disabled={loading}
             sx={{
-              color: "#FB784C",
+              color: "#FFFFFF",
+              backgroundColor: "white",
+              marginLeft: "1rem",
               ":hover": { color: "white", backgroundColor: "#FB784C" },
               fontWeight: "bold",
             }}
@@ -104,7 +108,7 @@ export default function Product({ product }: { product: product }) {
               setOpen(true);
               setLoading(true);
             }}
-            className="ml-4 font-semibold bg-main  text-[#FFFFFF] lg:invisible group-hover:visible  hover:animate-bouncing"
+            className="font-semibold  lg:invisible group-hover:visible  hover:animate-bouncing"
             type="submit"
             variant="contained"
           >

@@ -161,8 +161,8 @@ export default function Header(props: any) {
                     <Link
                       href={`/shop/${
                         categories[
-                          Math.floor(Math.random() * categories.length) - 1 <= 4
-                            ? 4
+                          Math.floor(Math.random() * categories.length) - 1 >= 4
+                            ? 3
                             : Math.floor(Math.random() * categories.length) - 1
                         ].name
                       }`}
